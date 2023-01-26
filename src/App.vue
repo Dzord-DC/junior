@@ -1,26 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <avatar-main />
+    <profil-main />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AvatarMain from './components/avatar/avatar-main.vue'
+import ProfilMain from './components/profil/profil-main.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    AvatarMain,
+    ProfilMain
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+.container{
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: #333333;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
