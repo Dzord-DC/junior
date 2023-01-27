@@ -1,5 +1,6 @@
 <template>
     <div class="input_box" @click="delitedAvatar()">
+        <div class="input-label">Удалить</div>
         <div class="input-file">
           <div class="icons" >&#10060;</div>
         </div>
@@ -22,10 +23,9 @@ export default {
 </script>
 
 <style scoped>
-.input_box{
+.input_box{   
+  cursor: pointer;
   background-color: rgba(238, 230, 230, 0.5);
-  width: 40px;
-  height: 40px;
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -35,13 +35,25 @@ export default {
 .input_box:hover{
   background-color: rgba(238, 230, 230, 0.8);
 }
+.input_box:hover >.input-label{
+  width: 95px;
+}
 .edit-avatar{
   display: none;
 }
-.icons{
-    cursor: pointer;
-    width: 33px;
-    height: 35px;
+.icons{ 
+    width: 36px;
+    height: 36px;
     font-size: 25px;
+    padding: 2px;
+}
+.input-label{
+  width: 0;
+  overflow: hidden;
+  height: 40px;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

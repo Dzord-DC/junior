@@ -2,6 +2,7 @@
   <div class="row">
     <div class="input_box">
         <label for="inputAvatar" class="input-file">
+          <div class="input-label">Редактировать</div>
           <div class="icons" >&#9998;</div>
             <input 
               type="file" 
@@ -10,6 +11,7 @@
               ref="inputAvatar" 
               @change="loadAva()" 
               accept=".jpg, .jpeg, .png">
+              
         </label>
     </div>
     </div>
@@ -39,27 +41,39 @@ export default {
 
 <style scoped>
 .input-file{
-  background-color: rgba(238, 230, 230, 0.5);
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.3s;
+  background-color: rgba(238, 230, 230, 0.5);
+  border-radius: 20px;
+  cursor: pointer;
 }
 .input-file:hover{
   background-color: rgba(238, 230, 230, 0.8);
+  
+}
+.input-file:hover >.input-label{
+  width: 105px;
 }
 .edit-avatar{
   display: none;
 }
 .icons{
-  cursor: pointer;
-  width: 23px;
-  height: 36px;
-  font-size: 25px;
-  transform: rotate(90deg);
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 25px;
+    transform: translate(3px, 3px) rotate(90deg);
+    padding: 6px;
 }
-
+.input-label{
+  width: 0;
+  overflow: hidden;
+  height: 40px;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>
