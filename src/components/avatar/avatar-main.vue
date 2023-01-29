@@ -34,6 +34,7 @@ export default {
 <style lang="scss" scoped>
 .avtar-containet{
     position: relative;
+    margin: 50px;
 }
 .avatar{
     width: 225px;
